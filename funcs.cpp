@@ -25,9 +25,9 @@ Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
 }
 
 //Task C:
-// void move(Coord3D *ppos, Coord3D *pvel, double dt){
-
-// }
+void move(Coord3D *ppos, Coord3D *pvel, double dt){
+    
+}
 
 //Task E:
 //allocate memory and initialize
