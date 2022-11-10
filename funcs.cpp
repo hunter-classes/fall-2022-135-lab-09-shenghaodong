@@ -13,9 +13,16 @@ double calcLength(Coord3D *p){
 }
 
 //Task B:
-// Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
+Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
+    double p1Length = calcLength(p1);
+    double p2Length = calcLength(p2);
 
-// }
+    if(p1Length > p2Length){
+        return p1;
+    }else{
+        return p2;
+    }
+}
 
 //Task C:
 // void move(Coord3D *ppos, Coord3D *pvel, double dt){
