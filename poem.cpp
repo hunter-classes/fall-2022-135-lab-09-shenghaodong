@@ -13,7 +13,7 @@ int main() {
         p = createAPoemDynamically();
 
         // assume that the poem p is not needed at this point
-        *p = nullptr;
-        
+        delete p;
+        p = nullptr;
     }
 }

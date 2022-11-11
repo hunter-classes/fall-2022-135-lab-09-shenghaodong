@@ -26,16 +26,26 @@ Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
 
 //Task C:
 void move(Coord3D *ppos, Coord3D *pvel, double dt){
-    
+    //takes position, velocity and time
+    Coord3D oldPos = *ppos;
+    Coord3D vel = *pvel;
+    ppos -> x = oldPos.x + vel.x * dt;
+
+    ppos -> y = oldPos.y + vel.y * dt;
+
+    ppos -> z = oldPos.z + vel.z * dt;
 }
 
 //Task E:
 //allocate memory and initialize
-// Coord3D* createCoord3D(double x, double y, double z){
-
-// }
+Coord3D* createCoord3D(double x, double y, double z){
+    Coord3D* returnVal = new Coord3D{x, y, z};
+    return returnVal;
+}
 
 //free memory
-// void deleteCoord3D(Coord3D *p){
+void deleteCoord3D(Coord3D *p){
+    delete p;
+    p = nullptr;
     
-// }
+}
